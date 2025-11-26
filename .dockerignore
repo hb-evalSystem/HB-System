@@ -1,0 +1,69 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+
+# === Git ===
+.git
+.gitignore
+.gitattributes
+
+# === Virtual Environments ===
+env/
+venv/
+ENV/
+env_bak/
+venv.bak/
+
+# === IDEs & Editors ===
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === HB-Eval Specific ===
+# لا تُضمّن النسخة التجارية أبدًا في الصورة العامة
+commercial/
+premium/
+enterprise/
+*.key
+*.env
+secrets/
+config/*.json
+
+# === Logs & Temp ===
+*.log
+temp/
+tmp/
+*.tmp
+
+# === Build Artifacts ===
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
