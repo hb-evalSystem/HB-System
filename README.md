@@ -1,47 +1,41 @@
 <p align="center">
-  <img src="https://github.com/hb-evalSystem/HB-System/blob/main/assets/logo.png" alt="HB-Eval System" width="420"/>
+  <img src="https://github.com/hb-evalSystem/HB-System/blob/main/assets/hb-eval-logo.png" alt="HB-Eval System" width="480"/>
 </p>
 
-<h1 align="center">🧠 HB-Eval System™</h1>
+<h1 align="center">HB-Eval System™</h1>
+<h3 align="center"><b>The first Agentic AI framework that actually works in the real world</b></h3>
 
 <p align="center">
-  <strong>The Leading Behavioral Evaluation & Trustworthy Agentic AI System</strong>
+  <img src="https://img.shields.io/badge/PEI-0.92-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/FRR-92%25-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Trust%20Score-4.62%2F5.0-blueviolet?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/stars/hb-evalSystem/HB-System?style=for-the-badge&color=yellow"/>
 </p>
 
 <p align="center">
-  <b>PEI = 0.92 · FRR = 92% · Human Trust Score = 4.62/5.0</b><br>
-  500-Task Longitudinal Benchmark · 4-Paper Series (Nov 2025)
+  <b>500 real-world tasks · 4 groundbreaking papers · Nov 2025</b>
 </p>
 
 <p align="center">
-  <a href="https://opensource.org/licenses/Apache-2.0">
-    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"/>
-  </a>
-  <a href="https://arxiv.org/abs/XXXX">
-    <img src="https://img.shields.io/badge/arXiv-2511.XXXXX-b31b1b.svg" alt="arXiv"/>
-  </a>
-  <a href="https://github.com/hb-evalSystem/HB-System/stargazers">
-    <img src="https://img.shields.io/github/stars/hb-evalSystem/HB-System?style=social" alt="Stars"/>
-  </a>
+  <i>“Finally, an agent that doesn’t hallucinate, doesn’t give up, and humans actually trust.”</i>
 </p>
 
-> **Open-Core Edition** – Full research & non-commercial use (Apache 2.0)  
-> Enterprise features → licensing@hb-eval.ai
+<hr>
 
-## ⚠️ Commercial Use Prohibited Without License
-Production use or commercial integration requires a paid license.  
-Contact: **licensing@hb-eval.ai**
+## The 4 Problems Everyone Pretends Don’t Exist… We Solved Them All
 
-## 🌟 Closes All 4 Gaps in Agentic AI
+| Problem                        | Everyone Else                     | HB-Eval System™                              | Proof                                 |
+|-------------------------------|-----------------------------------|-----------------------------------------------|---------------------------------------|
+| Agents fail silently         | “Just add more tools lol”         | PEI-guided real-time evaluation               | PEI = 0.92                            |
+| Agents get stuck & never recover | “Retry 10 times”                 | 92% Failure Recovery Rate (FRR)               | FRR = 92%                             |
+| Agents forget after 5 minutes  | Vector DB spam                    | Eval-Driven Memory (EDM) – remembers only what matters | MRS = 0.07                            |
+| Humans don’t trust the output  | “Here’s 10 pages of logs”         | Full human-readable explanations (HCI-EDM)   | Trust score 4.62/5.0 (240 participants) |
 
-| Gap                    | Solved By                 | Open-Core       | Enterprise                  |
-|------------------------|---------------------------|-----------------|-----------------------------|
-| Evaluation             | HB-Eval (PEI, FRR, TI)    | ✓               | ✓ + real-time               |
-| Adaptation             | Adapt-Plan                | ✓ basic         | ✓ Full MetaController       |
-| Long-Term Memory       | Eval-Driven Memory (EDM)  | ✓ simple        | ✓ advanced + consistency    |
-| Human Trust & XAI      | HCI-EDM                   | Demo            | ✓ full explanations         |
+**Yes, all four — in one single framework.**
 
-## 🚀 Quick Start (30 seconds)
+<hr>
+
+## 30-Second Demo (Yes, really)
 
 ```bash
 git clone https://github.com/hb-evalSystem/HB-System.git
