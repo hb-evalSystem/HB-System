@@ -4,10 +4,10 @@ The Leading Behavioral Evaluation & Trustworthy Agentic AI Framework
 
 <p align="center">
   <img src="https://img.shields.io/badge/PEI-0.92-8A2BE2?style=for-the-badge" />
-  <img src="https://imgshields.io/badge/FRR-92%25-32CD32?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FRR-92%25-32CD32?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Human%20Trust-4.62%2F5.0-1E90FF?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Benchmark-500%20Tasks-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Series-4%20Papers-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Series-4%20Papers-red?style=for-for-the-badge" />
   <img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" />
 </p>
 
@@ -76,7 +76,7 @@ The system uses probabilistic-behavior models to evaluate:
   * **FRR (Failure Recovery Rate)**
   * **TI (Task Integrity)**
 
-These three form a stable benchmark across 500+ tasks.
+These three form a stable benchmark across 500+ tasks. **[Note: The performance metrics shown in the badges (e.g., PEI=0.92) are results from internal testing. This Open-Core release is intended to facilitate independent and external verification (benchmarking).]**
 
 ### 2\. Adapt-Plan Engine
 
@@ -145,6 +145,8 @@ The 4-paper series evaluates:
   * Memory-Grounded Behavior Correction
   * Human Trust & Multi-Agent Alignment
 
+**Upon official publication, the papers will include all detailed experimental protocols, task datasets, and human subject descriptions required for full reproducibility.**
+
 *(Links added upon publication.)*
 
 ## 📜 License
@@ -176,6 +178,7 @@ We welcome:
   * new memory algorithms
   * PEI/FRR enhancements
   * reproducibility improvements
+  * **Independent Benchmarking (We encourage external teams to validate the reported metrics\!)**
 
 Open an issue or submit a PR anytime.
 
