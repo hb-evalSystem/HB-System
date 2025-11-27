@@ -1,6 +1,6 @@
 # HB-Eval System – Commercial License Required for Enterprise Use
 
-© 2025 A. Abulqasim / HB-Eval Technologies Ltd. All rights reserved.
+© 2025 A. Abuelgasim Mohamed Ibrahim Adam / HB-Eval Technologies Ltd. All rights reserved.
 
 The source code in this repository is licensed under Apache License 2.0 for **non-commercial, research, and evaluation purposes only**.
 
