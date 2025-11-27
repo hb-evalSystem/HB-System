@@ -1,0 +1,20 @@
+# tasks/task_definitions.yaml
+
+# This file serves as a placeholder to demonstrate the structure of the 500+ tasks
+# used for the HB-Eval System benchmark. Full task definitions are linked in the research papers.
+
+- task_id: T_001
+  name: "General Operations Optimization"
+  domain: "Logistics"
+  description: "A planning task requiring sequential execution and state management."
+  type: "Planning/Execution"
+  metrics_expected: ["PEI", "FRR"]
+  
+- task_id: T_002
+  name: "Failure Recovery Scenario A"
+  domain: "Safety"
+  description: "A task designed to deliberately fail at step 2 to test the FRR capacity."
+  type: "Resilience Test"
+  metrics_expected: ["FRR", "TI"]
+  
+# ... Additional 498 task definitions (to be added later)
