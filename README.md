@@ -1,5 +1,10 @@
-         #🧠 HB-Eval System™ — Open-Core Edition  
+        # **🧠 HB-Eval System™ — Open-Core Edition**
 The Leading Behavioral Evaluation & Trustworthy Agentic AI Framework
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PEI-0.92-8A2BE2?style=for-the-badge" />
+  ...
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PEI-0.92-8A2BE2?style=for-the-badge" />
