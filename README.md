@@ -1,7 +1,15 @@
 
-
 # 🧠 HB-Eval System™ — Open-Core Edition
 The Leading Behavioral Evaluation & Trustworthy Agentic AI Framework
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PEI-0.92-8A2BE2?style=for-the-badge" />
+  <img src="https://imgshields.io/badge/FRR-92%25-32CD32?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Human%20Trust-4.62%2F5.0-1E90FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Benchmark-500%20Tasks-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Series-4%20Papers-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" />
+</p>
 
 This repository contains the fully functional research-grade **Open-Core** version of HB-Eval System™.
 
