@@ -1,67 +1,231 @@
-<p align="center">
-  <a href="https://github.com/hb-evalSystem/HB-System">
-    <img src="https://github.com/hb-evalSystem/HB-System/blob/main/assets/hb-eval-logo.png" alt="HB-Eval System" width="520"/>
-  </a>
-</p>
+# 🧠 HB-Eval System™ — Open-Core Edition
 
-<h1 align="center">HB-Eval System™</h1>
-<h3 align="center"><b>Behavioral Evaluation & Trustworthy Agentic AI Framework</b></h3>
+**The Leading Behavioral Evaluation & Trustworthy Agentic AI Framework**
 
 <p align="center">
-  <a href="https://github.com/hb-evalSystem/HB-System/releases"><img src="https://img.shields.io/github/v/release/hb-evalSystem/HB-System?label=Latest%20Release&style=for-the-badge" alt="Release"/></a>
-  <img src="https://img.shields.io/badge/PEI-0.92-brightgreen?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/FRR-92%25-success?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Human%20Trust-4.62%2F5.0-blueviolet?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/stars/hb-evalSystem/HB-System?style=for-the-badge&color=yellow"/>
-  <img src="https://img.shields.io/github/forks/hb-evalSystem/HB-System?style=for-the-badge&color=lightblue"/>
+  <img src="https://img.shields.io/badge/PEI-0.92-8A2BE2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FRR-92%25-32CD32?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Human%20Trust-4.62%2F5.0-1E90FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Benchmark-500%20Tasks-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Papers-4%20Series-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" />
 </p>
 
-<p align="center">
-  <b>500-Task Longitudinal Benchmark • 4-Paper Series (Nov 2025) • Open-Core (Apache 2.0)</b>
-</p>
-
-> **"The first complete framework that actually solves the four biggest problems in Agentic AI."**
+> This repository contains the **fully functional research-grade Open-Core version** of HB-Eval System™.
+> It provides: evaluation, adaptation, memory, and trust-analysis modules for next-generation Agentic AI.
 
 ---
 
-## Why HB-Eval System Exists
+## ⭐ Overview
 
-| Problem                     | Current Solutions (2025)         | HB-Eval System Solution                        | Result                |
-|----------------------------|----------------------------------|------------------------------------------------|-----------------------|
-| Unreliable Evaluation       | Accuracy-only metrics            | PEI / FRR / TI (behavioral)                    | PEI = **0.92**        |
-| Agents get stuck & fail     | Retry / human-in-the-loop        | Quantitative MetaController                   | FRR = **92%**         |
-| Poor long-term memory       | Vector DB spam                   | Eval-Driven Memory (EDM) – stores only high-PEI | MRS = **0.07**        |
-| Humans don’t trust output   | Tracing tools only               | HCI-EDM – full human-readable explanations    | Trust = **4.62/5.0**  |
+Modern Agentic AI still struggles with four core limitations:
 
-## 500-Task Longitudinal Benchmark
+| Problem Area              | HB-Eval System Solution           | Included in Open-Core |
+| ------------------------- | --------------------------------- | --------------------- |
+| Evaluation                | PEI / FRR / TI Behavioral Metrics | ✓                     |
+| Adaptive Planning         | Adapt-Plan (rule-based)           | ✓                     |
+| Long-Term Memory          | Eval-Driven Memory (EDM)          | ✓                     |
+| Human-Aligned Trust (XAI) | Explanation-Driven Memory Signals | ✓ (basic demo)        |
 
-- 500 real-world tasks (planning, tool-use, reasoning, alignment)  
-- Fully reproducible JSON specs → [`/benchmarks/tasks/`](benchmarks/tasks/)  
-- Baselines vs **AgentBench**, **WebArena**, **GAIA**  
-- Automated evaluation scripts + CI validation  
+This Open-Core edition is optimized for **research, benchmarking, and reproducible experimentation**.
 
-→ [benchmarks/](benchmarks/)
+---
 
-## Human Trust Study (240 participants)
+## 🚀 Quick Start
 
-- Stratified sampling, inter-rater agreement **κ = 0.81**  
-- Raw anonymized data & full statistical analysis  
-→ [studies/human_eval_report.pdf](studies/human_eval_report.pdf)
-
-## Comparison With Leading Frameworks (2025)
-
-| Framework     | Behavioral Metrics | FRR   | Trust Score | Zero-Hallucination Control | Production Ready |
-|---------------|--------------------|-------|-------------|-----------------------------|------------------|
-| LangGraph     | No                 | ~75%  | ~3.9        | No (LLM-based)              | Prototyping      |
-| CrewAI        | No                 | ~78%  | 4.1         | No                          | Good             |
-| AutoGen       | No                 | ~72%  | 4.0         | No                          | Good             |
-| **HB-Eval System** | Yes PEI/FRR/TI     | **92%** | **4.62**    | Yes Quantitative only       | **High-stakes**  |
-
-## Quick Start (30 seconds)
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/hb-evalSystem/HB-System.git
 cd HB-System
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -e .
-export LLM_API_KEY=sk-...
+```
+
+### 3. Run the demo
+
+```bash
 python open_core/demo.py
+```
+
+---
+
+## 📦 Project Structure
+
+```
+open_core/
+ ├── adapt_planner.py        # Adapt-Plan: deterministic adaptive planner
+ ├── agent_loop.py           # Main agent inference/control loop
+ ├── edm_memory.py           # Eval-Driven Memory (EDM)
+ ├── external_llm_api.py     # External LLM interface (OpenAI-ready)
+ ├── demo.py                 # Full system demo
+setup.py
+Dockerfile
+README.md
+```
+
+---
+
+## 🧩 Core Components
+
+### 1. **PEI / FRR Behavioral Evaluation**
+
+The system uses probabilistic-behavior models to evaluate:
+
+* **PEI**: Performance Efficiency Index
+* **FRR**: Failure Recovery Rate
+* **TI**: Task Integrity
+
+These three form a stable benchmark across 500+ tasks.
+
+---
+
+### 2. **Adapt-Plan Engine**
+
+A lightweight deterministic planner that:
+
+* decomposes goals
+* generates sub-goals
+* adapts steps from similar past experiences
+* produces new executable plans when no memory match exists
+
+---
+
+### 3. **Eval-Driven Memory (EDM)**
+
+A memory system that:
+
+* stores plans
+* ranks past experiences using PEI
+* retrieves the closest match to new goals
+* learns progressively with use
+
+---
+
+### 4. **Explanation Signals (XAI Foundations)**
+
+Basic signals included for research:
+
+* memory traces
+* decision rationales
+* scoring path per step
+
+Full XAI controller is not part of the Open-Core edition.
+
+---
+
+## 🛠 Example Code Snippet
+
+```python
+from edm_memory import EDM, Experience, ExperienceMetrics
+from adapt_planner import AdaptPlan, Plan
+from agent_loop import AgentLoop
+
+edm = EDM()
+planner = AdaptPlan()
+agent = AgentLoop(edm, planner)
+
+result = agent.run("Optimize General Operations")
+```
+
+---
+
+## 🐳 Docker Support
+
+Build:
+
+```bash
+docker build -t hb-eval-open-core .
+```
+
+Run:
+
+```bash
+docker run --rm hb-eval-open-core
+```
+
+---
+
+## 🔌 External LLM Integration (Optional)
+
+The system includes a plug-and-play API wrapper:
+
+```
+open_core/external_llm_api.py
+```
+
+Supports:
+
+* Real OpenAI API
+* Local / Mock LLM mode
+* Custom endpoints
+
+---
+
+## 📚 Research Papers (Open-Series 2025)
+
+The 4-paper series evaluates:
+
+1. Behavioral Gaps in Agentic AI
+2. Adaptive Planning Under Uncertainty
+3. Memory-Grounded Behavior Correction
+4. Human Trust & Multi-Agent Alignment
+
+(Links added upon publication.)
+
+---
+
+## 📜 License
+
+This Open-Core version is licensed under:
+
+**Apache License 2.0**
+
+You may use it for:
+
+* research
+* academic work
+* commercial integration (open-core only)
+* derivative frameworks
+
+Enterprise modules are not included.
+
+---
+
+## 🤝 Contributing
+
+We welcome:
+
+* bug reports
+* new planners
+* new memory algorithms
+* PEI/FRR enhancements
+* reproducibility improvements
+
+Open an issue or submit a PR anytime.
+
+---
+
+## 🌟 Citation
+
+If you use HB-Eval System in research:
+
+```
+@software{
+  hb_eval_system_2025,
+  title={HB-Eval System: Behavioral Evaluation & Trustworthy Agentic AI},
+  author={Abuelgasim Adam},
+  year={2025},
+  url={https://github.com/hb-evalSystem/HB-System}
+}
+```
+
+---
+
+## 🔗 Repository
+
+[https://github.com/hb-evalSystem/HB-System](https://github.com/hb-evalSystem/HB-System)
