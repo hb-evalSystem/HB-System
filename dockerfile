@@ -1,53 +1,71 @@
 # ============================================================
 # HB-Eval System – Open-Core Edition
-# Official Docker Image (Multi-stage build – أصغر حجم + أكثر أمانًا)
-# Python 3.11 Slim → ~85 MB فقط
+# Official Docker Image (Multi-stage build for optimal size)
+# Python 3.11 Slim → ~85 MB base image
 # ============================================================
 
-# ──────── Stage 1: Build ────────
+# ──────── Stage 1: Builder ────────
 FROM python:3.11-slim AS builder
 
-# تحسين الأداء + منع الكاش
+# Performance optimization + prevent cache
 ENV PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /build
 
-# تثبيت الأدوات المطلوبة لبناء الويلز (إن وجدت)
+# Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential gcc && \
-    rm -rf /var/lib/apt/lists/*
+    build-essential \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
 
-# نسخ ملفات الاعتماد أولًا (لاستغلال الكاش)
-COPY pyproject.toml setup.py README.md ./
-COPY open_core ./open_core
+# Copy dependency files first (leverage Docker cache)
+COPY pyproject.toml setup.py setup.cfg README.md ./
+COPY hb_eval ./hb_eval
 
-# تثبيت الاعتماديات + الحزمة
-RUN pip install --upgrade pip && \
+# Install dependencies + package
+RUN pip install --upgrade pip setuptools wheel && \
     pip install .
 
-# ──────── Stage 2: Runtime (الصورة النهائية النحيفة جدًا) ────────
+# ──────── Stage 2: Runtime (Minimal final image) ────────
 FROM python:3.11-slim
 
-# إنشاء مستخدم غير root (أفضل ممارسة أمنية 2025)
-RUN adduser --disabled-password --gecos '' hbuser
+# Create non-root user (security best practice)
+RUN useradd --create-home --shell /bin/bash hbuser
 
 WORKDIR /app
 
-# نسخ فقط الملفات المطلوبة من مرحلة البناء
+# Copy only necessary files from builder
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
-COPY --from=builder /app/open_core ./open_core
+COPY --from=builder /usr/local/bin /usr/local/bin
+COPY --from=builder /build/hb_eval ./hb_eval
 
-# تبديل للمستخدم غير root
+# Copy additional project files
+COPY README.md LICENSE ./
+COPY papers ./papers
+COPY tasks ./tasks
+
+# Switch to non-root user
 USER hbuser
 
-# متغيّر بيئي لتفعيل وضع الإنتاج
-ENV HB_EVAL_MODE=production
+# Environment variable for production mode
+ENV HB_EVAL_MODE=production \
+    PYTHONUNBUFFERED=1
 
-# رسالة ترحيبية عند التشغيل
-ENTRYPOINT ["python", "-c", "from open_core.demo import run_demo; run_demo()"]
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import hb_eval; print('OK')" || exit 1
 
-# إذا أراد المستخدم تشغيل أمر مخصص
-CMD ["python", "-c", "print('HB-Eval System Open-Core ready! Run: from open_core.demo import run_demo; run_demo()')"]
+# Labels for metadata
+LABEL maintainer="hbevalframe@gmail.com" \
+      version="1.0.0" \
+      description="HB-Eval System Open-Core Edition" \
+      org.opencontainers.image.source="https://github.com/hb-evalSystem/HB-System"
+
+# Default command: run demo
+CMD ["python", "-m", "hb_eval.demo"]
+
+# Alternative: Interactive shell
+# CMD ["python", "-i", "-c", "from hb_eval import *; print('HB-Eval System ready!')"]
