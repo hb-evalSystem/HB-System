@@ -1,0 +1,12 @@
+# Core Dependencies for HB-Eval System
+requests>=2.31.0
+pydantic>=2.0.0
+
+# Optional: Development Dependencies
+# Uncomment the following lines for development mode:
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.5.0
+# isort>=5.12.0
