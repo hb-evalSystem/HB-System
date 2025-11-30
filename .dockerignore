@@ -1,3 +1,7 @@
+# ============================================================
+# .dockerignore - Optimize Docker build context
+# ============================================================
+
 # === Python ===
 __pycache__/
 *.py[cod]
@@ -5,65 +9,98 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-env/
-venv/
-.venv/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
 pip-log.txt
 pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.pytest_cache/
-
-# === Git ===
-.git
-.gitignore
-.gitattributes
 
 # === Virtual Environments ===
 env/
 venv/
 ENV/
-env_bak/
+env.bak/
 venv.bak/
+.venv/
+
+# === Testing & Coverage ===
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+
+# === Git ===
+.git/
+.gitignore
+.gitattributes
+.github/
 
 # === IDEs & Editors ===
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
-
-# === OS Files ===
 .DS_Store
-Thumbs.db
 
-# === HB-Eval Specific ===
-# لا تُضمّن النسخة التجارية أبدًا في الصورة العامة
-commercial/
-premium/
-enterprise/
-*.key
-*.env
-secrets/
-config/*.json
+# === Documentation ===
+docs/_build/
+docs/.doctrees/
+*.md
+!README.md
 
-# === Logs & Temp ===
+# === CI/CD ===
+.github/
+.gitlab-ci.yml
+.travis.yml
+azure-pipelines.yml
+
+# === Logs & Temporary Files ===
 *.log
 temp/
 tmp/
 *.tmp
+logs/
 
-# === Build Artifacts ===
-build/
-dist/
-*.egg-info/
-*.egg
-*.whl
+# === Commercial & Secrets ===
+commercial/
+premium/
+enterprise/
+*.key
+*.pem
+.env
+.env.*
+secrets/
+config/*.json
+*.sqlite
+*.db
+
+# === OS Files ===
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# === Docker ===
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# === Other ===
+*.bak
+*.orig
+*.rej
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
