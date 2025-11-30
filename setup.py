@@ -1,6 +1,10 @@
-# setup.py
+"""
+HB-Eval System Setup Configuration
+Modern setup.py that defers to pyproject.toml for configuration.
+"""
 
 from setuptools import setup
 
-# يستخدم هذا الملف setup.cfg لتحديد كل الإعدادات
+# All configuration is now in pyproject.toml
+# This file exists for backward compatibility and editable installs
 setup()
