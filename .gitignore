@@ -1,0 +1,118 @@
+# ============================================================
+# .gitignore for HB-Eval System
+# ============================================================
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# === Virtual Environments ===
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# === Testing ===
+.tox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+htmlcov/
+
+# === IDEs & Editors ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# === OS Files ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# === Logs & Databases ===
+*.log
+*.sqlite
+*.sqlite3
+*.db
+logs/
+temp/
+tmp/
+
+# === Environment & Secrets ===
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+config/*.json
+
+# === HB-Eval Specific ===
+# Commercial/Premium versions
+commercial/
+premium/
+enterprise/
+
+# Generated data
+data/
+experiments/
+results/
+outputs/
+
+# Cached models
+models/
+checkpoints/
+
+# === Documentation ===
+docs/_build/
+docs/_static/
+docs/_templates/
+site/
+
+# === Build Artifacts ===
+*.manifest
+*.spec
+*.pyc
+
+# === Type Checking ===
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints/
+*.ipynb
+
+# === Package Manager ===
+poetry.lock
+Pipfile.lock
