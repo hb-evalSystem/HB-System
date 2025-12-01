@@ -1,18 +1,18 @@
 # 🧠 HB-Eval System™ — Open-Core Edition
 
 **The First Comprehensive Behavioral Evaluation Framework for Agentic AI**
+<div align="center">
+  <img src="assets/hb-eval-logo.png" alt="HB-Eval Logo" width="500"/>
+  
+  <h1>HB-Eval: Hybrid Behavioral Evaluation Framework</h1>
+  
+  <p><strong>A comprehensive evaluation framework for embodied AI agents</strong></p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0--alpha-blue?style=for-the-badge" alt="Version" />
-  <img src="https://img.shields.io/badge/Status-Research%20Preview-yellow?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge" alt="Python Version" />
-  <img src="https://img.shields.io/badge/Papers-4%20Series-red?style=for-the-badge" alt="Papers" />
-</p>
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)](https://www.python.org/)
+  [![arXiv](https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg)](#research)
 
-<p align="center">
-  <b>Backed by rigorous research | Validated through empirical studies | Ready for academic & industry use</b>
-</p>
+</div>
 
 ---
 
