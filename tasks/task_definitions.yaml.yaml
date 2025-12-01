@@ -1,0 +1,350 @@
+# ============================================================
+# HB-Eval System - Task Definitions
+# ============================================================
+# This file serves as a placeholder demonstrating the structure
+# of the 500+ tasks used for the HB-Eval System benchmark.
+# Full task definitions are detailed in the research papers.
+#
+# Version: 1.0.0
+# Date: 2025-11-29
+# License: Apache-2.0
+# ============================================================
+
+metadata:
+  version: "1.0.0"
+  total_tasks: 500
+  description: "Benchmark tasks for comprehensive agent evaluation"
+  reference: "A. Abuelgasim, HB-Eval Framework, 2025"
+  domains:
+    - logistics
+    - data_analysis
+    - software_engineering
+    - content_generation
+    - problem_solving
+  difficulty_levels:
+    - easy
+    - medium
+    - hard
+
+# ============================================================
+# Example Task Definitions
+# ============================================================
+
+tasks:
+  # -------------------- Logistics Domain --------------------
+  - task_id: T_001
+    name: "General Operations Optimization"
+    domain: "Logistics"
+    difficulty: "medium"
+    description: "A planning task requiring sequential execution and state management for optimizing general operations workflow"
+    type: "Planning/Execution"
+    optimal_steps: 7
+    l_min: 7
+    tools_required:
+      - workflow_analyzer
+      - optimizer
+      - validator
+    success_criteria: "Operations optimized with measurable efficiency gains"
+    metrics_expected:
+      pei: 0.85
+      frr: 0.80
+      ti: 4.5
+    test_cases:
+      - input: "Current workflow with 5 steps"
+        expected_output: "Optimized workflow with 3-4 steps"
+  
+  - task_id: T_002
+    name: "Failure Recovery Scenario A"
+    domain: "Safety"
+    difficulty: "hard"
+    description: "A task designed to deliberately fail at step 2 to test the FRR (Failure Recovery Rate) capacity"
+    type: "Resilience Test"
+    optimal_steps: 8
+    l_min: 8
+    fault_injection:
+      type: "tool_failure"
+      inject_at_step: 2
+      severity: 0.8
+    success_criteria: "Task completed despite injected failure"
+    metrics_expected:
+      pei: 0.70
+      frr: 0.75
+      ti: 4.0
+    test_cases:
+      - input: "Multi-step task with critical dependency"
+        expected_behavior: "Recovery via replanning or tactical adaptation"
+  
+  - task_id: T_003
+    name: "Route Optimization with Constraints"
+    domain: "Logistics"
+    difficulty: "medium"
+    description: "Optimize delivery route for multiple locations with time windows and capacity constraints"
+    type: "Optimization"
+    optimal_steps: 6
+    l_min: 6
+    tools_required:
+      - route_planner
+      - constraint_checker
+      - cost_calculator
+    success_criteria: "Valid route meeting all constraints with minimized cost"
+    metrics_expected:
+      pei: 0.80
+      frr: 0.85
+      ti: 4.3
+  
+  # -------------------- Data Analysis Domain --------------------
+  - task_id: T_004
+    name: "Sales Data Aggregation"
+    domain: "Data Analysis"
+    difficulty: "easy"
+    description: "Calculate quarterly sales averages and identify trends"
+    type: "Analysis"
+    optimal_steps: 4
+    l_min: 4
+    tools_required:
+      - data_loader
+      - aggregator
+      - trend_analyzer
+    success_criteria: "Accurate quarterly averages computed"
+    metrics_expected:
+      pei: 0.90
+      frr: 0.90
+      ti: 4.7
+  
+  - task_id: T_005
+    name: "Customer Segmentation Analysis"
+    domain: "Data Analysis"
+    difficulty: "medium"
+    description: "Segment customers based on purchase behavior and demographics"
+    type: "Analysis/Clustering"
+    optimal_steps: 8
+    l_min: 8
+    tools_required:
+      - data_preprocessor
+      - clustering_algorithm
+      - visualizer
+    success_criteria: "Meaningful customer segments identified with clear characteristics"
+    metrics_expected:
+      pei: 0.78
+      frr: 0.80
+      ti: 4.2
+  
+  # -------------------- Software Engineering Domain --------------------
+  - task_id: T_006
+    name: "Unit Test Implementation"
+    domain: "Software Engineering"
+    difficulty: "medium"
+    description: "Implement comprehensive unit tests for authentication module"
+    type: "Testing"
+    optimal_steps: 9
+    l_min: 9
+    tools_required:
+      - code_analyzer
+      - test_generator
+      - test_runner
+    success_criteria: "Test coverage > 80% and all tests passing"
+    metrics_expected:
+      pei: 0.82
+      frr: 0.85
+      ti: 4.4
+  
+  - task_id: T_007
+    name: "Code Refactoring for SOLID Principles"
+    domain: "Software Engineering"
+    difficulty: "hard"
+    description: "Refactor legacy codebase to adhere to SOLID principles"
+    type: "Refactoring"
+    optimal_steps: 12
+    l_min: 12
+    tools_required:
+      - code_analyzer
+      - refactoring_tool
+      - dependency_checker
+      - test_runner
+    success_criteria: "All SOLID principles satisfied with passing tests"
+    metrics_expected:
+      pei: 0.68
+      frr: 0.70
+      ti: 3.8
+  
+  # -------------------- Content Generation Domain --------------------
+  - task_id: T_008
+    name: "SEO-Optimized Blog Post"
+    domain: "Content Generation"
+    difficulty: "medium"
+    description: "Generate 1000-word blog post about AI trends with SEO optimization"
+    type: "Content Creation"
+    optimal_steps: 8
+    l_min: 8
+    tools_required:
+      - topic_researcher
+      - content_writer
+      - seo_optimizer
+      - readability_checker
+    success_criteria: "Post meets word count, SEO score > 80, readability grade appropriate"
+    metrics_expected:
+      pei: 0.75
+      frr: 0.78
+      ti: 4.3
+  
+  - task_id: T_009
+    name: "Technical Documentation Generation"
+    domain: "Content Generation"
+    difficulty: "easy"
+    description: "Generate API documentation from code comments"
+    type: "Documentation"
+    optimal_steps: 5
+    l_min: 5
+    tools_required:
+      - code_parser
+      - doc_generator
+      - formatter
+    success_criteria: "Complete documentation with all endpoints covered"
+    metrics_expected:
+      pei: 0.88
+      frr: 0.85
+      ti: 4.6
+  
+  # -------------------- Problem Solving Domain --------------------
+  - task_id: T_010
+    name: "Constraint Satisfaction Problem"
+    domain: "Problem Solving"
+    difficulty: "hard"
+    description: "Solve CSP with 10 variables and multiple constraints"
+    type: "Constraint Solving"
+    optimal_steps: 15
+    l_min: 15
+    tools_required:
+      - constraint_solver
+      - validator
+      - backtracker
+    success_criteria: "Valid solution satisfying all constraints found"
+    metrics_expected:
+      pei: 0.65
+      frr: 0.68
+      ti: 3.5
+
+# ============================================================
+# Task Categories and Distribution
+# ============================================================
+
+distribution:
+  by_domain:
+    logistics: 150  # 30%
+    data_analysis: 125  # 25%
+    software_engineering: 100  # 20%
+    content_generation: 75  # 15%
+    problem_solving: 50  # 10%
+  
+  by_difficulty:
+    easy: 150  # 30%
+    medium: 250  # 50%
+    hard: 100  # 20%
+  
+  by_type:
+    planning: 120
+    analysis: 100
+    optimization: 80
+    testing: 60
+    content_creation: 70
+    problem_solving: 70
+
+# ============================================================
+# Fault Injection Scenarios
+# ============================================================
+
+fault_scenarios:
+  - scenario_id: FS_001
+    name: "Tool Failure at Critical Step"
+    fault_type: "tool_failure"
+    applicable_tasks: [T_001, T_002, T_003, T_006]
+    inject_at_step: 2
+    expected_frr: 0.75
+  
+  - scenario_id: FS_002
+    name: "Data Contradiction"
+    fault_type: "data_contradiction"
+    applicable_tasks: [T_004, T_005]
+    inject_at_step: 3
+    expected_frr: 0.80
+  
+  - scenario_id: FS_003
+    name: "Memory Poisoning (MINJA)"
+    fault_type: "memory_poisoning"
+    applicable_tasks: "all"
+    target_memory: "procedural"
+    expected_mir: 0.85
+
+# ============================================================
+# Expected Baseline Performance
+# ============================================================
+
+baseline_performance:
+  react_agent:
+    success_rate: 0.85
+    average_frr: 0.40
+    average_pei: 0.75
+    average_ti: 4.5
+  
+  reflexion_agent:
+    success_rate: 0.82
+    average_frr: 0.75
+    average_pei: 0.60
+    average_ti: 3.2
+  
+  ap_edm_agent:
+    success_rate: 0.88
+    average_frr: 1.00
+    average_pei: 0.90
+    average_ti: 4.8
+
+# ============================================================
+# Usage Instructions
+# ============================================================
+
+usage:
+  loading: |
+    import yaml
+    with open('tasks/task_definitions.yaml', 'r') as f:
+        tasks = yaml.safe_load(f)
+  
+  filtering: |
+    # Get tasks by domain
+    logistics_tasks = [t for t in tasks['tasks'] if t['domain'] == 'Logistics']
+    
+    # Get tasks by difficulty
+    hard_tasks = [t for t in tasks['tasks'] if t['difficulty'] == 'hard']
+  
+  benchmarking: |
+    from benchmarks import run_benchmark
+    results = run_benchmark(agent, task_definitions='tasks/task_definitions.yaml')
+
+# ============================================================
+# Notes
+# ============================================================
+
+notes:
+  - "This file shows 10 representative tasks out of 500 total"
+  - "Full task dataset will be released in Q1 2026"
+  - "Tasks designed to test diverse agent capabilities systematically"
+  - "L_min (optimal steps) determined through expert analysis"
+  - "Expected metrics provide baseline for comparison"
+  - "Fault injection scenarios test resilience (FRR, MIR)"
+  - "All tasks include detailed success criteria for objective evaluation"
+
+# ============================================================
+# Contact and Citation
+# ============================================================
+
+contact:
+  email: "hbevalframe@gmail.com"
+  github: "https://github.com/hb-evalSystem/HB-System"
+  issues: "https://github.com/hb-evalSystem/HB-System/issues"
+
+citation: |
+  @software{hb_eval_tasks_2025,
+    title={HB-Eval System Task Definitions},
+    author={Abuelgasim, A.},
+    year={2025},
+    url={https://github.com/hb-evalSystem/HB-System}
+  }
