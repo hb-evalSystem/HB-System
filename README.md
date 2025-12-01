@@ -1,4 +1,4 @@
-# HB-Eval: Hybrid Behavioral Evaluation Framework
+# HB-SYSTEM: Hybrid Behavioral Evaluation Framework
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)](https://www.python.org/)
