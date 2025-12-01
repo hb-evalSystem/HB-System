@@ -6,16 +6,18 @@
   
   <h1>HB-Eval: Hybrid Behavioral Evaluation Framework</h1>
   
-  <p><strong>A comprehensive evaluation framework for embodied AI agents</strong></p>
+  <p><strong>A comprehensive evaluation framework for embodied AI agents with performance-driven memory and semantic understanding.</strong></p>
 
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)](https://www.python.org/)
-  [![arXiv](https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg)](#research)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+  [![arXiv](https://img.shields.io/badge/arXiv-Coming%20Dec%202025-b31b1b.svg)](#research-foundation)
 
 </div>
 
 ---
 
+## 🎯 What is HB-Eval?
 ## 🎯 What is HB-Eval System?
 
 **HB-Eval System** is the **first comprehensive behavioral evaluation framework** for Agentic AI, addressing critical gaps in reliability, transparency, and trustworthiness through a **4-paper research series** and novel evaluation metrics.
