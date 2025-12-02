@@ -5,13 +5,13 @@ on:
     types: [published]
 
 permissions:
-  id-token: write  # مهم جداً للـ Trusted Publisher
+  id-token: write
 
 jobs:
   pypi-publish:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
-    environment: pypi  # نفس الاسم في PyPI
+    environment: PYPI
     steps:
       - uses: actions/checkout@v4
       
@@ -28,5 +28,5 @@ jobs:
       - name: Build package
         run: python -m build
       
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v2
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
