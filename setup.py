@@ -1,10 +1,9 @@
-"""
-HB-Eval System Setup Configuration
-Modern setup.py that defers to pyproject.toml for configuration.
-"""
+from setuptools import setup, find_packages
 
-from setuptools import setup
+setup(
+    name="hb-eval",
+    packages=find_packages(),
+    include_package_data=True,
+)
+```
 
-# All configuration is now in pyproject.toml
-# This file exists for backward compatibility and editable installs
-setup()
