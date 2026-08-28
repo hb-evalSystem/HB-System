@@ -1,0 +1,17 @@
+# HB-Eval Requirements
+# Core dependency (mandatory)
+requests>=2.28.0
+
+# Optional — required for figure generation only
+matplotlib>=3.6.0
+
+# Optional — for faster statistical sampling (falls back to stdlib if absent)
+# scipy>=1.9.0
+
+# Development dependencies (not required for evaluation)
+# pytest>=7.0.0
+# Dashboard dependencies
+supabase>=2.4.0
+pandas>=2.0.0
+plotly>=5.20.0
+streamlit>=1.35.0

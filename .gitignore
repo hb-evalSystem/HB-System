@@ -1,0 +1,61 @@
+# Environment files — NEVER commit these
+.env
+.env.local
+.env.production
+
+# API keys if stored separately
+*.key
+secrets.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Runtime-generated results.
+#
+# NOTE: data/results/ is NO LONGER fully ignored. The published dataset lives
+# there and is committed deliberately - 10,998 records plus MANIFEST.json,
+# which tests/verify_dataset.py checks on every push.
+#
+# An earlier version of this file ignored data/results/*.json wholesale, from
+# when those files were only ever produced at runtime. After the dataset was
+# published, that rule silently excluded it: git skipped the files without
+# error, the repository looked complete locally, and CI failed on a manifest
+# referencing files GitHub had never received.
+#
+# The ignore is now scoped to the working-output names the replication scripts
+# actually write, and the published files are allowed explicitly.
+data/results/*_progress.json
+data/results/*_partial.json
+data/results/tmp_*.json
+data/schedules/*.json
+
+# Published dataset - committed on purpose, verified by CI
+!data/results/methodology_*.json
+!data/results/MANIFEST.json
+
+# Sample records and directory placeholders
+!data/sample_records/*.json
+!data/**/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Figures generated at runtime
+figures/*.pdf
+figures/*.png

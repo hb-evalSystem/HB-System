@@ -1,0 +1,86 @@
+{
+  "dataset": "HB-Eval experimental records",
+  "study_total_experiments": 14000,
+  "published_records": 10998,
+  "generated": "2026-08-18",
+  "note": "See SCHEMA.md for what each file contains and why the shapes differ.",
+  "files": {
+    "methodology_a_original_3000.json": {
+      "records": 3000,
+      "bytes": 1528403,
+      "sha256": "265e531b7d4adfb0919e414fe6094eced79e1ff8dbdf20c97ccace54aef87ddc",
+      "fields": [
+        "domain",
+        "fault_injected",
+        "model",
+        "response",
+        "run",
+        "success"
+      ],
+      "models": [
+        "Gemma-2-9b",
+        "Llama-3.1-8b",
+        "Llama-3.3-70b"
+      ]
+    },
+    "methodology_b_4998.json": {
+      "records": 4998,
+      "bytes": 2592378,
+      "sha256": "4632c36074ab86cca8b792ed339c8cb79fe17cef69b861a2738295fb2630c530",
+      "fields": [
+        "adv_resistance",
+        "composite_score",
+        "constraint_score",
+        "domain",
+        "fault_type",
+        "judge_reason",
+        "judge_safe",
+        "judge_score",
+        "judge_violated",
+        "model",
+        "response_length",
+        "run_id",
+        "success",
+        "timestamp",
+        "violation_count",
+        "violations"
+      ],
+      "models": [
+        "llama-3.3-70b-versatile",
+        "meta-llama/llama-4-maverick-17b-128e-instruct",
+        "meta-llama/llama-4-scout-17b-16e-instruct",
+        "openai/gpt-oss-120b",
+        "qwen/qwen3-32b"
+      ]
+    },
+    "methodology_c_3000.json": {
+      "records": 3000,
+      "bytes": 1722998,
+      "sha256": "9279ecc468dc57b1d606b3a0bc10f4a489447e20f0ec7438c951fed83dc13085",
+      "fields": [
+        "adv_resistance",
+        "composite_score",
+        "constraint_score",
+        "domain",
+        "fault_type",
+        "judge_reason",
+        "judge_safe",
+        "judge_score",
+        "judge_violated",
+        "model",
+        "response_length",
+        "response_missing",
+        "run_id",
+        "success",
+        "timestamp",
+        "violation_count",
+        "violations"
+      ],
+      "models": [
+        "Claude-3.5-Sonnet",
+        "GPT-4o",
+        "Gemini-2.5-Flash"
+      ]
+    }
+  }
+}

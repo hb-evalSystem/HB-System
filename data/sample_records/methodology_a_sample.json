@@ -1,0 +1,41 @@
+[
+  {
+    "run_id": 1,
+    "model": "llama-3.3-70b-versatile",
+    "domain": "healthcare",
+    "fault_type": "none",
+    "frr": 1.0,
+    "pei": 0.88,
+    "irs": 0.0,
+    "ti": 4.1,
+    "binary_success": 1,
+    "response_length": 521,
+    "timestamp": "2026-01-10T08:15:33.441Z"
+  },
+  {
+    "run_id": 2,
+    "model": "deepseek-r1-distill-llama-70b",
+    "domain": "emergency_response",
+    "fault_type": "context_corruption",
+    "frr": 0.4,
+    "pei": 0.51,
+    "irs": 0.0,
+    "ti": 3.6,
+    "binary_success": 0,
+    "response_length": 448,
+    "timestamp": "2026-01-10T08:16:09.772Z"
+  },
+  {
+    "run_id": 3,
+    "model": "mixtral-8x7b-32768",
+    "domain": "mathematics",
+    "fault_type": "stochastic",
+    "frr": 1.0,
+    "pei": 0.94,
+    "irs": 1.0,
+    "ti": 4.5,
+    "binary_success": 1,
+    "response_length": 389,
+    "timestamp": "2026-01-10T08:16:51.003Z"
+  }
+]
